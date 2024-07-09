@@ -7,14 +7,17 @@ Ensuring safe water sources is critical for public health and environmental sust
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Data Preparation](#Data-Preparation)
-3. [Exploratory Data Analysis](#Exploratory-Data-Analysis) 
+2. [Exploratory Data Analysis](#Exploratory-Data-Analysis)
+3. [Data Preparation](#Data-Preparation)
 4. [Model Evaluation](#Evaluate-models)
 
 
-### Importing Necessary Libraries
 
 #Exploratory Data Analysis
+
+
+
+### Importing Necessary Libraries
 First, import the necessary libraries for data analysis and machine learning.
 
 ```python
