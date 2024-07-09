@@ -8,13 +8,13 @@ Ensuring safe water sources is critical for public health and environmental sust
 
 1. [Introduction](#introduction)
 2. [Data Preparation](#Data-Preparation)
-3. [Exploratory Data Analysis (EDA)](#Exploratory-Data-Analysis) 
+3. [Exploratory Data Analysis](#Exploratory-Data-Analysis) 
 4. [Model Evaluation](#Evaluate-models)
 
-# Data Preparation
 
 ### Importing Necessary Libraries
 
+#Exploratory Data Analysis
 First, import the necessary libraries for data analysis and machine learning.
 
 ```python
@@ -111,7 +111,7 @@ sns.countplot(data=water_data , x = 'is_safe')
 It Shows that there is an imbalance in this column
 
 
-#data preperation
+# Data Preparation
 ## Data Transformation
 Convert categorical variables into numerical ones for machine learning models.
 there is a problem in ammonia column that it have numbers as a string DataType 'it is easy to handle' but if it also have multiple Values as a string and it contain Characters?
