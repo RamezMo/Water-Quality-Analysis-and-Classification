@@ -1,4 +1,4 @@
-# Water_Quality-Predictor-Model : Machine Learning Model for Forecasting Water_Quality with nearly 82.45%% accuracy
+# Water_Quality-Predictor-Model : Machine Learning Model for Forecasting Water_Quality with nearly 82.5% accuracy
 
 ## Introduction
 
