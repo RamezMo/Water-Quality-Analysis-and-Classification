@@ -1,4 +1,4 @@
-# Water_Quality-Predictor-Model : Machine Learning Model for Forecasting Water_Quality with nearly 82.5% accuracy
+# Water_Quality-Predictor-Model : Machine Learning Model for Forecasting Water_Quality with nearly 95.3% accuracy
 
 ## Introduction
 
@@ -49,7 +49,7 @@ inspect the first few rows to understand its structure.
 water_data.head(10)
 ```
 
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-09%20201935.png)
+![image](https://github.com/user-attachments/assets/be63b4b3-10eb-4c7e-bd6e-e33f2d4e4051)
 
 
 ## How Many Instances and Features ?
@@ -66,7 +66,7 @@ water_data.shape
 ```python
 water_data.info()
 ```
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-09%20202340.png)
+![image](https://github.com/user-attachments/assets/fea9c985-556c-40d1-86ae-4b968fa23808)
 
 All variables DataType are Numerical except ammonia & is_safe we will handle later
 
@@ -77,7 +77,7 @@ Check for and handle missing values to ensure a clean dataset.
 water_data.isnull().sum()
 ```
 
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-09%20202530.png)
+![image](https://github.com/user-attachments/assets/9cef2661-76d7-4622-a586-958167462636)
 
 
 ## Summary statistics
@@ -86,7 +86,7 @@ water_data.isnull().sum()
 water_data.describe()
 ```
 
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-09%20205507.png)
+![image](https://github.com/user-attachments/assets/fe9cc7b6-a8f9-47e2-ba39-237a321ffdc1)
 
 
 ## Calculate the correlation matrix
@@ -101,7 +101,7 @@ corr=water_data.corr()
 plt.figure(figsize=(20,20))
 sns.heatmap(corr,annot=True,mask = np.triu(np.ones_like(corr, dtype=bool)))
 ```
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-09%20205746.png)
+![image](https://github.com/user-attachments/assets/2569d815-0de7-4b2d-8a90-aefe4ccda91f)
 
 
 ## Distribution of is_safe Column values
@@ -110,7 +110,7 @@ Notice it is not balanced so we will work on this problem
 print(water_data.is_safe.value_counts())
 sns.countplot(data=water_data , x = 'is_safe')
 ```
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-10%20021211.png)
+![image](https://github.com/user-attachments/assets/01161800-860a-4e9c-b223-ef4623aa36a3)
 It Shows that there is an imbalance in this column
 
 
@@ -156,7 +156,7 @@ plt.xticks(rotation=45)
 plt.show()
 ```
 
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-10%20022840.png)
+![image](https://github.com/user-attachments/assets/384557b3-7ddb-4d94-9b87-24c710b2c037)
 
 We Have outliers in arsenic and nitrites Columns
 
@@ -208,9 +208,9 @@ plt.title('nitrites Column After Removing Outliers')
 plt.show()
 
 ```
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-10%20024739.png)
+![image](https://github.com/user-attachments/assets/446c1d0c-90db-43a2-ae37-cb7c84841b3d)
 
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-10%20024746.png)
+![image](https://github.com/user-attachments/assets/57b3ffd9-0e49-4dbf-b722-094f8f923eb3)
 
 
 
@@ -223,7 +223,7 @@ y=balanced_data_no_outliers_final.is_safe
 
 
 ## Evaluate models
-after training the model and predicting it on test data it makes accuracy of nearly 82.45%
+after training the model and predicting it on test data it makes accuracy of nearly 95.3%
 
 ##Creating Confusion Matrix
 it shows the predicted values Distribution
@@ -232,5 +232,5 @@ it shows the predicted values Distribution
 cm = confusion_matrix(y_test, predicted_testing)
 ConfusionMatrixDisplay(confusion_matrix=cm).plot();
 ```
-![image](https://raw.githubusercontent.com/RamezMo/Water-Quality-Analysis-and-Classification/main/Screenshot%202024-07-10%20025017.png)
+![image](https://github.com/user-attachments/assets/be5e7cba-3d58-4aab-988b-5e36509575c3)
 
